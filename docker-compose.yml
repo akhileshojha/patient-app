@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    ports:
+      - 8000:8000
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/patient_db
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data:/data/db
