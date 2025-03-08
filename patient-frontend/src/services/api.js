@@ -3,7 +3,7 @@ import axios from "axios";
 //import { useLoadingStore } from "../stores/loadingStore"; // Optional loading state management
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL || "http://localhost:8000/api",
+  baseURL: "http://localhost:8000/api",
   timeout: 10000, // 10-second timeout
   headers: {
     "Content-Type": "application/json",
